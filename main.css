@@ -1,0 +1,328 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+header {
+  background: url("https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjA3OTJ8MHwxfGFsbHx8fHx8fHx8fDE2MjE1Nzc0ODI&ixlib=rb-1.2.1&q=80&w=1080")
+    no-repeat center center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+  padding: 0.1rem;
+  margin: 0 auto;
+  color: #fff;
+  animation: rgbBorder 3s linear infinite;
+}
+
+header h1 {
+  animation: rgbBorder 3s linear infinite;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: sectionFadeIn 1s forwards;
+}
+.authors {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.author {
+  margin: 1em;
+  text-align: center;
+}
+.author img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("https://png.pngtree.com/thumb_back/fw800/background/20190422/pngtree-brick-wall-background-image_107845.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: #f4f4f4;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  animation: subtleBg 30s ease-in-out infinite;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+.card {
+  position: relative;
+  border-radius: 8px #fff;
+  width: 220px;
+  text-align: center;
+  animation: fadeIn 1s ease-out forwards;
+  overflow: hidden;
+  background: url("https://wallpaperbat.com/img/2779-joker-2019-joaquin-phoenix-8k-wallpaper.jpg")
+    no-repeat center;
+  background-size: cover;
+  min-height: 400px;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(26, 25, 25, 0.2);
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transform: scale(1.1);
+}
+.card h3 {
+  margin: 0.5rem 0;
+}
+.card p {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+}
+.card button {
+  margin: 0.5rem 0;
+  padding: 0.4rem 0.8rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.card button:hover:after {
+  left: 100%;
+}
+.card .content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+}
+.video-section {
+  margin: 2rem auto;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 2px solid #333;
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 2px;
+  background: #fff;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+.social-link i {
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+  transform: rotate(360deg);
+}
+
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #9c27b0;
+  transform: translateX(10px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+@keyframes sectionFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rgbBorder {
+  0% {
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000,
+      0 0 40px #ff0000;
+  }
+  33% {
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00,
+      0 0 40px #00ff00;
+  }
+  66% {
+    box-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 30px #0000ff,
+      0 0 40px #0000ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000,
+      0 0 40px #ff0000;
+  }
+}
+
+@keyframes subtleBg {
+  0%,
+  100% {
+    background-position: center;
+  }
+  50% {
+    background-position: center 55%;
+  }
+}
+
+@keyframes titleGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 30px rgba(128, 0, 128, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+header h1 {
+  animation: titleGlow 3s infinite;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
